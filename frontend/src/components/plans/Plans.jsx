@@ -1,57 +1,49 @@
-import "./plans.css"
-import React, { useEffect, useState } from 'react'
-import {allMemberships, buyMembership} from "../../Actions/memberships"
-import { useDispatch,useSelector } from "react-redux"
+import React, { useEffect, useState } from 'react';
+import { allMemberships, buyMembership } from '../../Actions/memberships';
+import { useDispatch, useSelector } from 'react-redux';
+import './plans.css'; // Import CSS file
 
 const Plans = () => {
-    const dispatch = useDispatch()
-useEffect(() => {
-  dispatch(allMemberships())  
-}, [])
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(allMemberships());
+  }, []);
 
-const[membership,getMembership]=useState('');
+  const [membership, setMembership] = useState('');
 
-function buyHandler(){
-    dispatch(buyMembership(membership))
-    
-}
-const check_buy_status = useSelector((state)=>state.membership.purchase)
+  function buyHandler() {
+    dispatch(buyMembership(membership));
+  }
 
-   
+  const memberships = useSelector((state) => state.membership.memberships);
 
-const memberships = useSelector((state)=>state.membership.memberships)
   return (
     <div className="plans_main_container">
-        <div className="plans_parent">
-            
-            {memberships && memberships.length>0 && 
-            (
-                <table>
-                    <tr>
-                        <th>
-                            Name
-                        </th>
-                        <th>
-                            Description
-                        </th>
-                        <th>
-                        Buy
-                        </th>
-                        
-                    </tr>
-                    {memberships.map((element,index)=>{
-                      return  <tr key={index} >
-                            <td>{element.membership_name}</td>
-                            <td>{element.membership_description}</td>
-                            <td><button onClick={()=>{getMembership(element.membership_name);buyHandler();console.log(element.membership_name)}} >{element.membership_price} INR</button></td>
-                        </tr>
-                    })}
-                </table>
-            )
-            }
-        </div>
+      <div className="plans_parent">
+        {memberships && memberships.length > 0 && (
+          <div className="plans_container">
+            {memberships.map((element, index) => {
+              return (
+                <div key={index} className="plan_card">
+                  <h3 className="plan_name">{element.membership_name}</h3>
+                  <p className="plan_description">{element.membership_description}</p>
+                  <button
+                    onClick={() => {
+                      setMembership(element.membership_name);
+                      buyHandler();
+                    }}
+                    className="buy_button"
+                  >
+                    {element.membership_price} INR
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Plans
+export default Plans;
