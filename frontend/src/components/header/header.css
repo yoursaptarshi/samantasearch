@@ -1,0 +1,11 @@
+.header{
+    
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header h1{
+    color:rgb(167, 166, 166);
+    
+}

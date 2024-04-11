@@ -1,0 +1,117 @@
+import {createReducer} from "@reduxjs/toolkit";
+
+const initialstate ={isAuthenticated:false,isAdmin:false}
+
+export const userReducer = createReducer(initialstate,{
+    LoginRequest:(state)=>{
+        state.loading=true;
+    },
+    LoginSuccess:(state,action)=>{
+        state.loading=false;
+        state.user=action.payload;
+        state.isAuthenticated=true;
+    },
+    LoginFailure:(state,action)=>{
+        state.loading=false;
+        state.error=action.payload;
+        state.isAuthenticated=false;
+    },
+    RegisterRequest:(state)=>{
+        state.loading=true;
+    },
+    RegisterSuccess:(state,action)=>{
+        state.loading=false;
+        state.user=action.payload;
+        state.isAuthenticated=true;
+    },
+    RegisterFailure:(state,action)=>{
+        state.loading=false;
+        state.error=action.payload;
+        state.isAuthenticated=false;
+    },
+    LoadUserRequest:(state)=>{
+        state.loading=true;
+    },
+    LoadUserSuccess:(state,action)=>{
+        state.loading=false;
+        state.user=action.payload;
+        state.isAuthenticated=true;
+    },
+    LoadUserFailure:(state,action)=>{
+        state.loading=false;
+        state.error=action.payload;
+        state.isAuthenticated=false;
+    },
+    LogoutUserSuccess:(state)=>{
+        state.loading=false;
+        state.user=null;
+        state.isAuthenticated=false;
+    },
+    LogoutUserFailure:(state)=>{
+        state.loading=false;
+        state.isAuthenticated=true;
+    },
+    UpdateNameRequest:(state)=>{
+        state.loading=false;
+    },
+    UpdateNameSuccess:(state,action)=>{
+        state.loading=false;
+        state.user=action.payload
+    },
+    UpdateNameFailure:(state,action)=>{
+        state.loading=false;
+        state.error=action.payload;
+    },
+    UpdateuserNameRequest:(state)=>{
+        state.loading=true;
+    },
+    UpdateuserNameSuccess:(state,action)=>{
+        state.loading=false;
+        state.user=action.payload;
+    },
+    updateuserNameFailure:(state,action)=>{
+        state.loading=false;
+        state.error=action.payload;
+    },
+    UploadPhotorequest:(state)=>{
+        state.loading=true
+    },
+    UploadPhotoSuccess:(state,action)=>{
+        state.loading=false;
+        state.user=action.payload
+    },
+    UploadPhotoFailed:(state,action)=>{
+        state.loading=false;
+        state.error=action.payload
+    },
+
+
+    //admin reducers
+    AdminUserRequest:(state)=>{
+        state.loading=true;
+    },
+    AdminUserSuccess:(state,action)=>{
+        state.loading=false;
+        state.isAdmin=action.payload;
+        state.isAuthenticated=true;
+    },
+    AdminUserFailure:(state,action)=>{
+        state.loading=false;
+        state.error=action.payload;
+        state.isAuthenticated=false;
+    },
+
+    GetAllUserRequest:(state)=>{
+        state.loading=true
+    },
+    GetAllUserSuccess:(state,action)=>{
+        state.loading=false;
+        state.users = action.payload;
+        state.isAuthenticated=true;
+    },
+    GetAllUserFailure:(state,action)=>{
+        state.loading=false;
+        state.error=action.payload;
+        state.isAuthenticated=false;
+    }
+})

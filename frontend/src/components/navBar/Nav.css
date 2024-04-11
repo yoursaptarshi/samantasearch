@@ -1,0 +1,42 @@
+.parent_Nav_container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.left_nav_container{
+    min-width: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgb(255, 255, 199),rgb(255, 204, 108));
+    padding: 0 1vw;
+    border-radius: 1vw;
+    
+}
+
+
+.right_nav_container{
+    min-width: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgb(255, 255, 199),rgb(255, 204, 108));
+    padding: 0 1vw;
+    border-radius: 1vw;
+}
+.parent_Nav_container a{
+    color:aliceblue;
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .parent_Nav_container {
+        flex-direction: column;
+    }
+
+    .left_nav_container,
+    .right_nav_container {
+        min-width: auto;
+        width: 100%;
+        margin-bottom: 1vw; /* Add some spacing between the containers */
+    }
+}

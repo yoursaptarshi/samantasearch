@@ -1,0 +1,22 @@
+.plans_main_container table {
+   
+    width: 100%;
+  }
+  
+  .plans_main_container th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .plans_main_container th {
+    background-color: #f2f2f2;
+  }
+  
+ .plans_main_container tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  .plans_main_container button{
+    min-width:2vw;
+    min-height:1vh
+  }

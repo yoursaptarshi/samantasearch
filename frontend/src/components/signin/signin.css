@@ -1,0 +1,100 @@
+.signin_main{
+    background-image:linear-gradient(45deg, rgb(191, 191, 251), rgb(250, 194, 194));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+.main_signin{
+    min-height: 600px;
+    background-color: white;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 5px 10px rgb(175, 175, 175);
+}
+.main_signin input{
+    height: 100%;
+    border: none;
+    margin-left:10px;
+    padding-left: 50px;
+}
+.username_wrapper{
+    display: flex;
+    text-align: center;
+    color: white;
+    margin-bottom: 15%;
+}
+.username_text{
+    background-image: linear-gradient(45deg,rgb(167, 192, 249),rgb(195, 252, 185));
+    min-width: 150px;
+    border-radius: 5px;
+}
+.password_text{
+    background-image: linear-gradient(45deg,rgb(167, 192, 249),rgb(195, 252, 185));
+    min-width: 150px;
+    border-radius: 5px;
+}
+.password_wrapper{
+    display: flex;
+    text-align: center;
+    color: white;
+    margin-bottom: 15%;
+}
+.button_wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 15%;
+}
+
+.button_signin button{
+    
+    border-radius: 45px;
+    min-width: 150px;
+    min-height: 30px;
+    color: white;
+    border: none;
+    background-image: linear-gradient(rgb(75, 75, 255),rgb(0, 0, 152));
+    cursor: pointer;
+}
+
+.button_signin button:hover{
+    background-image: linear-gradient(rgb(44, 44, 151),rgb(0, 0, 90));
+
+}
+@media only screen and (max-width: 900px) {
+    .signin_main {
+        min-height: auto;
+    }
+
+    .main_signin {
+        width: 80%;
+    }
+
+    .main_signin input {
+        padding-left: 20px;
+    }
+
+    .username_text,
+    .password_text {
+        min-width: 100px;
+    }
+
+    .button_signin button {
+        min-width: 120px;
+    }
+
+    .button_wrapper {
+        margin-top: 20px;
+        margin-bottom: 10%;
+    }
+
+    .username_wrapper,
+    .password_wrapper {
+        margin-bottom: 10%;
+    }
+}

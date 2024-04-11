@@ -1,0 +1,18 @@
+.footer_main{
+    background-color: rgb(206, 246, 254);
+    min-height: 100px;
+}
+.footer_wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.footer_main button{
+    border-radius: 45px;
+    min-width: 100px;
+    min-height: 25px;
+    color: white;
+    border: none;
+    background-image: linear-gradient(rgb(81, 255, 75),rgb(0, 152, 25));
+    
+}

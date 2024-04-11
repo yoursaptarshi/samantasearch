@@ -1,0 +1,130 @@
+.main{
+    background-image:linear-gradient(45deg, rgb(191, 191, 251), rgb(250, 194, 194));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 800px;
+    width:100%;
+}
+.register_wrapper input{
+    height: 100%;
+    border: none;
+    margin-left:10px;
+    padding-left: 50px;
+}
+.register_wrapper{
+    height: 600px;
+    background-color: white;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+.name_wrapper{
+    display: flex;
+    text-align: center;
+    color: white;
+    margin-bottom: 15%;
+    
+}
+.username_wrapper{
+    display: flex;
+    text-align: center;
+    color: white;
+    margin-bottom: 15%;
+}
+.email_wrapper{
+    display: flex;
+    text-align: center;
+    color: white;
+    margin-bottom: 15%;
+}
+.gender_wrapper{
+    display: flex;
+    text-align: center;
+    color: white;
+    margin-bottom: 15%;
+}
+.dob_wrapper{
+    display: flex;
+    text-align: center;
+    color: white;
+    margin-bottom: 15%;
+}
+.password_wrapper{
+    display: flex;
+    text-align: center;
+    color: white;
+    margin-bottom: 15%;
+}
+.register_wrapper .name_text{
+    background-image: linear-gradient(45deg,rgb(167, 192, 249),rgb(195, 252, 185));
+    min-width: 150px;
+    border-radius: 5px;
+}
+.register_wrapper .email_text{
+    background-image: linear-gradient(45deg,rgb(167, 192, 249),rgb(195, 252, 185));
+    min-width: 150px;
+    border-radius: 5px;
+}
+.register_wrapper .gender_text{
+    background-image: linear-gradient(45deg,rgb(167, 192, 249),rgb(195, 252, 185));
+    min-width: 150px;
+    border-radius: 5px;
+}
+.register_wrapper .dob_text{
+    background-image: linear-gradient(45deg,rgb(167, 192, 249),rgb(195, 252, 185));
+    min-width: 150px;
+    border-radius: 5px;
+}
+.button_wrapper_register{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 15%;
+}
+.button_wrapper_register button{
+    border-radius: 45px;
+    min-width: 150px;
+    min-height: 30px;
+    color: white;
+    border: none;
+    background-image: linear-gradient(rgb(75, 75, 255),rgb(0, 0, 152));
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+    .main {
+        min-height: auto;
+    }
+
+    .register_wrapper {
+        width: 80%;
+    }
+
+    .register_wrapper input {
+        padding-left: 20px;
+    }
+
+    .register_wrapper .name_text,
+    .register_wrapper .email_text,
+    .register_wrapper .gender_text,
+    .register_wrapper .dob_text {
+        min-width: 120px;
+    }
+
+    .button_wrapper_register {
+        margin-top: 20px;
+        margin-bottom: 10%;
+    }
+
+    .name_wrapper,
+    .username_wrapper,
+    .email_wrapper,
+    .gender_wrapper,
+    .dob_wrapper,
+    .password_wrapper {
+        margin-bottom: 10%;
+    }
+}

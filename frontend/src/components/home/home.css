@@ -1,0 +1,249 @@
+/* home.css */
+
+.home_wrapper {
+    max-width: 90vw !important;
+  }
+  
+  .home_searchResults {
+    box-shadow: 0px 5px 15px rgba(175, 175, 175, 0.5);
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 25px;
+  }
+  
+  .imagesearchResults img {
+    max-width: 25vw;
+    min-height: 2vw;
+    max-height: 10vw;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    margin: 0.5vw;
+  }
+  
+  .imagesearchResults img:hover {
+    transform: scale(1.05);
+  }
+  
+  .websearchResults,
+  .imagesearchResults,
+  .mapsearchResults {
+    min-width: 30%;
+    padding-right: 10%;
+    display: none;
+  }
+  
+  .websearchResults h4,
+  .imagesearchResults h4 {
+    margin-bottom: 15px;
+    color: #3498db;
+  }
+  
+  .websearchResults li {
+    font-size: 1.5rem;
+    margin-bottom: 8%;
+    color: #646464;
+  }
+  
+  .websearchResults ul a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .home_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  
+  .home_searchbar input {
+    min-width: 600px;
+    min-height: 50px;
+    border-radius: 30px;
+    padding-left: 2%;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 1rem;
+  }
+  
+  .homelogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .homelogo img{
+    max-width: 15vw;
+  }
+  .home_searchbaricon {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+  }
+  
+  .home_searchbaricon button {
+    background: linear-gradient(45deg, white, rgb(54, 54, 215));
+    border: none;
+    border-radius: 30px;
+    min-width: 200px;
+    min-height: 30px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .home_searchbaricon button:hover {
+    background: linear-gradient(45deg, white, rgb(38, 38, 150));
+  }
+  
+  .home_navBar {
+    padding-right: 5%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .home_navBar .profile button{
+    background: white;
+  }
+  .home_navBar button {
+    margin: 1.8vw;
+    background: linear-gradient(45deg, rgb(167, 192, 249), rgb(195, 252, 185));
+    height: 8vh;
+    width: 4vw;
+    border-radius: 4vw;
+    border: none;
+    color: rgb(138, 138, 138);
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .home_navBar button:hover {
+    background: linear-gradient(45deg, rgb(143, 168, 225), rgb(170, 238, 162));
+  }
+  
+  .homepage_profile_components {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5%;
+  }
+  
+  .home_nav_profile_box {
+    background: linear-gradient(45deg, rgb(191, 191, 251), rgb(250, 194, 194));
+    min-height: 200px;
+    width: 200px;
+    visibility: hidden;
+    border-radius: 10%;
+    padding: 1% 2%;
+    box-shadow: 0px 5px 15px rgba(175, 175, 175, 0.5);
+  }
+  
+  .home_nav_profile_box #home_page_profie_edit_button {
+    margin-top: 2vh;
+    width: 8vw;
+    height: 5vh;
+    background: linear-gradient(45deg, rgb(57, 57, 255), rgb(16, 16, 121));
+    border: none;
+    border-radius: 0.2vw;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .home_nav_profile_box #home_page_profie_edit_button:hover {
+    background: linear-gradient(45deg, rgb(35, 35, 180), rgb(8, 8, 89));
+  }
+  
+  .home_navBar .profile img {
+    height: 6vw;
+    width: 6vw;
+    border-radius: 3vw;
+  }
+
+  
+@media only screen and (max-width: 900px) {
+    .home_wrapper {
+        display: grid;
+        max-width: 90vw;
+    }
+
+    .home_container {
+        display: grid;
+    }
+
+    .home_searchbar input {
+        min-width: 400px;
+        min-height: 40px;
+    }
+
+    .websearchResults li {
+        font-size: 15px;
+    }
+
+    .imagesearchResults img {
+        max-width: 200px;
+        min-height: 100px;
+        max-height: 100px;
+        border-radius: 25px;
+        cursor: pointer;
+    }
+
+    .home_searchbaricon {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .home_searchbaricon_web button,
+    .home_searchbaricon_image button,
+    .home_searchbaricon_map button {
+        min-width: 80%;
+        margin-top: 10px;
+        width: 20vw;
+    }
+
+    .home_navBar {
+        justify-content: space-between;
+    }
+
+    .home_navBar button {
+        margin: 15px 5px;
+        
+        width: 15vw;
+        border-radius: 4vw;
+    }
+
+    .home_nav_profile_box {
+        width: 100%;
+        border-radius: 0;
+        padding: 2%;
+        box-shadow: none;
+    }
+
+    .home_wrapper .home_nav_profile_box #home_page_profie_edit_button {
+        margin-top: 2vh;
+        width: 80%;
+        height: 3vh;
+    }
+
+    .home_wrapper .home_navBar .profile img {
+        height: 6.5vh;
+        width: 15vw;
+        border-radius: 0;
+    }
+
+    .home_searchResults {
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .websearchResults,
+    .imagesearchResults,
+    .mapsearchResults {
+        max-width: 80vw;
+        
+    }
+}
